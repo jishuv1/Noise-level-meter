@@ -1,0 +1,110 @@
+.noise-tracker {
+  background-color: #121212;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.noise-tracker h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.noise-tracker button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.noise-tracker button:hover {
+  background-color: #3e8e41;
+}
+
+.noise-tracker p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.noise-tracker .meter-container {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  position: relative;
+}
+
+.noise-tracker .meter-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 1px solid #555;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  background-color: #333;
+}
+
+.noise-tracker .meter-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #4caf50, #2196f3);
+  transform-origin: bottom center;
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+
+.noise-tracker .meter-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.noise-tracker .meter-label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  height: 20px;
+  width: 50%;
+}
+
+.bar p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-align: center;
+  color: blue;
+}
